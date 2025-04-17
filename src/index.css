@@ -39,6 +39,7 @@ p {
   font-size: 1.2em;
   line-height: 1.5;
   color: var(--text);
+  margin: 0;
 }
 button a {
   color: var(--background);
@@ -47,13 +48,37 @@ button a {
 
 button {
   font-size: 1.2em;
-  line-height: 1.5;
-  background-color: var(--secondary);
+  background-color: var(--accent);
   border: none;
   border-radius: 4px;
   padding: 0.5em 1em;
   cursor: pointer;
+  height: 40px;
 }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2em;
+  background-color: var(--accent);
+  color: var(--background);
+  border: none;
+  border-radius: 4px;
+  padding: 0.1em 1em;
+  cursor: pointer;
+  height: 40px;
+
+  text-decoration: none;
+  width: auto; /* eller fit-content, hvis understøttet */
+  max-width: max-content;
+}
+.button:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+
 
 
 

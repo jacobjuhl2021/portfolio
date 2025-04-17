@@ -1,30 +1,51 @@
 section {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-.container {
-    height: 92vh;
+    height: 100vh;
+    overflow: hidden;
 }
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 5vh;
 }
 .flexContainer {
+    padding-left: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 100vh;
 }
 .subFlexContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height:inherit;
-    justify-content: space-between;
-}
+    justify-content: space-evenly;
+    margin-left: 10vw;
+  }
+  
 .cvImage {
-    max-height: 70vh;
-    height: auto;
-    max-width: 500px;
+    height: 100vh;
+    max-width: auto;
+    background-color: var(--secondary);
+}
+.cvImage:hover {
+    background-color: var(--primary);
+    filter: brightness(1.2);
+    transition: filter 0.5s ease;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+span {
+    cursor: pointer;
+    color: var(--accent)
+}
+.inline {
+    color: var(--primary);
+    cursor: auto;
+}
+.liLink span:hover {
+    color: var(--primary);
 }
