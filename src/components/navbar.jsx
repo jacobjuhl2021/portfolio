@@ -9,12 +9,11 @@ export default function Navbar() {
   return (
     <nav className={styles.nav}>
         <button className={location.pathname === '/' ? styles.active : ''}>
-          <Link to="/">Mig</Link>
+          <Link to="/">About me</Link>
         </button>
         <button className={location.pathname === '/projects' ? styles.active : ''}>
           <Link to="/projects">Projekter</Link>
         </button>
-</nav>
-
+    </nav>
   );
 }

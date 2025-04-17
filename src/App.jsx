@@ -4,8 +4,8 @@ import Navbar from './components/Navbar'; // valgfrit
 function App() {
   return (
     <>
-      <Navbar />
       <AppRoutes />
+      <Navbar />
     </>
   );
 }

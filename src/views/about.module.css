@@ -1,0 +1,30 @@
+section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.container {
+    height: 92vh;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.subFlexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:inherit;
+    justify-content: space-between;
+}
+.cvImage {
+    max-height: 70vh;
+    height: auto;
+    max-width: 500px;
+}
