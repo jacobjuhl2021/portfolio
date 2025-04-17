@@ -1,21 +1,20 @@
 import { Link, useLocation } from 'react-router-dom';
+import styles from './Navbar.module.css';
 
-import styled from 'styled-components';
 
 
 export default function Navbar() {
   const location = useLocation(); // for at markere aktiv side
 
   return (
-    <nav className="navbar">
-      <ul className="navbar-list">
-        <li className={location.pathname === '/' ? 'active' : ''}>
-          <Link to="/">About</Link>
-        </li>
-        <li className={location.pathname === '/about' ? 'active' : ''}>
+    <nav className={styles.nav}>
+        <button className={location.pathname === '/' ? styles.active : ''}>
+          <Link to="/">Mig</Link>
+        </button>
+        <button className={location.pathname === '/projects' ? styles.active : ''}>
           <Link to="/projects">Projekter</Link>
-        </li>
-      </ul>
-    </nav>
+        </button>
+</nav>
+
   );
 }
