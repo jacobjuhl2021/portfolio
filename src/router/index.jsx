@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Projects from '../views/Projects';
-import About from '../views/About';
+import About from '../views/about';
 
 export default function AppRoutes() {
   return (

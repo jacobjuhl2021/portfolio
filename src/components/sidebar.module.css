@@ -1,0 +1,28 @@
+/* src/components/Sidebar.module.css */
+.sidebar {
+    width: 250px;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    height: 100vh;
+    position: fixed;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 15px 0;
+  }
+  
+  .sidebar .link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .sidebar .link:hover {
+    color: #433bff; /* Ændre farven når du hover */
+  }
+  
