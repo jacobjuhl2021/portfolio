@@ -3,6 +3,7 @@
     align-items: center;
     height: 10vh;
     padding-left: 1rem;
+    gap: 1rem;
 }
 .container{
     display: flex;
@@ -12,16 +13,21 @@
     height: 90vh;
 }
 .navContainer {
-    width: 25vw;
+    width: 20vw;
     height: 90vh;
-    border-color: blue;
+    overflow: hidden;
+    
+    /* border-color: blue;
     border-width: 5px;
     border-style: solid;
+    box-sizing: border-box; Sørger for, at border ikke forstørrer elementet */
 }
 .contentContainer {
-    width: 75vw;
+    width: 80vw; /* Fylder resten af pladsen ved siden af sidebaren */
     height: 90vh;
-    border-color: brown;
+    overflow: hidden; /* Tilføjer scroll, hvis indholdet er for stort */
+    /* border-color: brown;
     border-width: 5px;
     border-style: solid;
-}
+    box-sizing: border-box; Sørger for, at border ikke ændrer bredden */
+  }

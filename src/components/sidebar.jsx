@@ -5,14 +5,30 @@ import styles from './Sidebar.module.css'; // Tilføj din CSS-styling
 export default function Sidebar({ setActiveProject, activeProject }) { // Modtag activeProject som prop
   return (
     <nav className={styles.sidebar}>
-      <h2>Projects</h2>
+      {/* <h2>Projects</h2> */}
       <ul>
+      <li>
+          <span
+            className={`${styles.link} ${activeProject === 'Project5' ? styles.active : ''}`} // Tilføj aktiv klasse
+            onClick={() => setActiveProject('Project5')} // Opdater aktivt projekt
+          >
+            Thiv very portfolio
+          </span>
+        </li>
+      <li>
+          <span
+            className={`${styles.link} ${activeProject === 'Project4' ? styles.active : ''}`} // Tilføj aktiv klasse
+            onClick={() => setActiveProject('Project4')} // Opdater aktivt projekt
+          >
+            Valitech - Redesign(ongoing)
+          </span>
+        </li>
         <li>
           <span
             className={`${styles.link} ${activeProject === 'Project3' ? styles.active : ''}`} // Tilføj aktiv klasse
             onClick={() => setActiveProject('Project3')} // Opdater aktivt projekt
           >
-            Project 3
+            BIEZY - Bachelor project
           </span>
         </li>
         <li>
@@ -20,7 +36,7 @@ export default function Sidebar({ setActiveProject, activeProject }) { // Modtag
             className={`${styles.link} ${activeProject === 'Project2' ? styles.active : ''}`} // Tilføj aktiv klasse
             onClick={() => setActiveProject('Project2')} // Opdater aktivt projekt
           >
-            Project 2
+            Ordbogen A/S - internship
           </span>
         </li>
         <li>
@@ -28,7 +44,7 @@ export default function Sidebar({ setActiveProject, activeProject }) { // Modtag
             className={`${styles.link} ${activeProject === 'Project1' ? styles.active : ''}`} // Tilføj aktiv klasse
             onClick={() => setActiveProject('Project1')} // Opdater aktivt projekt
           >
-            Project 1
+            Geografisk have - Project
           </span>
         </li>
       </ul>
