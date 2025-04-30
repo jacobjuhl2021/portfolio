@@ -1,27 +1,56 @@
 /* src/components/Sidebar.module.css */
 .sidebar {
-    width: 250px;
-    
-    height: 100vh;
-    position: fixed;
-  }
+  height: 100vh;
+  width: 25vw;
+  position: fixed;
+  display: flex;
+  flex-direction: column; /* Sørger for, at elementerne stables lodret */
+  justify-content: flex-start; /* Placerer elementerne i toppen af containeren */
+  align-items: center; /* Centrerer elementerne horisontalt */
+  padding-top: 20px; /* Tilføj lidt afstand fra toppen */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Sørger for, at listen strækker sig over hele bredden */
+  text-align: center; /* Centrerer tekstindholdet i listen */
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+  font-size: 1.8em;
+  display: block; /* Sørger for, at linkene opfører sig som blokke og centrerer korrekt */
+  text-align: center; /* Centrerer teksten i hvert link */
+}
+
+.link:hover {
+  color: var(--primary);; 
+}
+
+.active {
+  font-weight: bold;
+  color: var(--primary); /* Fremhæv aktivt element */
+  position: relative; /* Gør det muligt at placere ::after relativt til teksten */
+  text-decoration: none;
+  padding-top: 10px; /* Tilføj afstand over teksten */
+  padding-bottom: 10px;
+}
+
+
+.active::after {
+  content: ''; /* Tilføj en tom linje */
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  bottom: 10px;
+  height: 3px; 
+  background-color: var(--primary); 
+  transform: scaleX(0.5); 
   
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    margin: 15px 0;
-  }
-  
-  .sidebar .link {
-    color: #333;
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-  
-  .sidebar .link:hover {
-    color: #433bff; /* Ændre farven når du hover */
-  }
+}
   

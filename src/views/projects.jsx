@@ -24,20 +24,21 @@ export default function Projects() {
 
   return (
     <>
-        <div className={styles.pageTop}>
-            <Link to="/" className="button">Page about me</Link>
-          <h1>My Projects</h1> 
-        </div>
+      <div className={styles.pageTop}>
+        <Link to="/" className="button">Page about me</Link>
+        <h1>My Projects</h1>
+      </div>
 
-        <div className={styles.container}>
-          <div className={styles.navContainer}>
-            <Sidebar setActiveProject={setActiveProject} /> {/* Pass setActiveProject */}
-          </div>
-          
-          <div className={styles.contentContainer}>
-            {renderActiveProject()} {/* Render det aktive projekt */}
-          </div>
+      <div className={styles.container}>
+        <div className={styles.navContainer}>
+          {/* Pass both setActiveProject and activeProject to Sidebar */}
+          <Sidebar setActiveProject={setActiveProject} activeProject={activeProject} />
         </div>
+        
+        <div className={styles.contentContainer}>
+          {renderActiveProject()} {/* Render det aktive projekt */}
+        </div>
+      </div>
     </>
   );
 }

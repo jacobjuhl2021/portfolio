@@ -2,36 +2,34 @@
 import React from 'react';
 import styles from './Sidebar.module.css'; // Tilføj din CSS-styling
 
-export default function Sidebar({ setActiveProject }) { // Modtag setActiveProject som prop
+export default function Sidebar({ setActiveProject, activeProject }) { // Modtag activeProject som prop
   return (
     <nav className={styles.sidebar}>
-        <h2>Projects</h2>
+      <h2>Projects</h2>
       <ul>
-      <li>
-          <button
-            className={styles.link}
+        <li>
+          <span
+            className={`${styles.link} ${activeProject === 'Project3' ? styles.active : ''}`} // Tilføj aktiv klasse
             onClick={() => setActiveProject('Project3')} // Opdater aktivt projekt
           >
             Project 3
-          </button>
+          </span>
         </li>
-
         <li>
-          <button
-            className={styles.link}
+          <span
+            className={`${styles.link} ${activeProject === 'Project2' ? styles.active : ''}`} // Tilføj aktiv klasse
             onClick={() => setActiveProject('Project2')} // Opdater aktivt projekt
           >
             Project 2
-          </button>
+          </span>
         </li>
-
         <li>
-          <button
-            className={styles.link}
+          <span
+            className={`${styles.link} ${activeProject === 'Project1' ? styles.active : ''}`} // Tilføj aktiv klasse
             onClick={() => setActiveProject('Project1')} // Opdater aktivt projekt
           >
             Project 1
-          </button>
+          </span>
         </li>
       </ul>
     </nav>
