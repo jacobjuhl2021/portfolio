@@ -4,7 +4,7 @@
 export default function Project1() {
     return (
       <>
-          <h1>projekt3</h1>
+          <h2>projekt3</h2>
       </>
     )}
     

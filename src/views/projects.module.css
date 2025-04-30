@@ -1,10 +1,27 @@
-header{
-    height: 100vh;
-    overflow: hidden;
-}
 .pageTop{
     display: flex;
     align-items: center;
     height: 10vh;
     padding-left: 1rem;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.navContainer {
+    width: 25vw;
+    height: 90vh;
+    border-color: blue;
+    border-width: 5px;
+    border-style: solid;
+}
+.contentContainer {
+    width: 75vw;
+    height: 90vh;
+    border-color: brown;
+    border-width: 5px;
+    border-style: solid;
 }
