@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16 # Brug en kompatibel version af Node.js
+          node-version: 18 # Brug en kompatibel version af Node.js
 
       # Installer afhængigheder
       - name: Install dependencies
