@@ -29,7 +29,13 @@ export default function Project3() {
             <li className={styles.liLink}>
                   <span
                     onClick={() => window.open('https://github.com/jacobjuhl2021/Bachelor_BI', '_blank')}>
-                    &#8618; Github Repository
+                    &#8618; Github Repository - Backend
+                  </span>
+            </li>
+            <li className={styles.liLink}>
+                  <span
+                    onClick={() => window.open('https://github.com/Nikolaihoej/BA-BI-frontend', '_blank')}>
+                    &#8618; Github Repository - Frontend
                   </span>
             </li>
             </p>

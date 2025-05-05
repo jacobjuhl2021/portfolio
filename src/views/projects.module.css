@@ -23,11 +23,51 @@
     box-sizing: border-box; Sørger for, at border ikke forstørrer elementet */
 }
 .contentContainer {
-    width: 80vw; /* Fylder resten af pladsen ved siden af sidebaren */
+    width: 80vw; 
     height: 90vh;
-    overflow: hidden; /* Tilføjer scroll, hvis indholdet er for stort */
+    overflow: hidden; 
     /* border-color: brown;
     border-width: 5px;
     border-style: solid;
     box-sizing: border-box; Sørger for, at border ikke ændrer bredden */
-  }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .pageTop {
+        flex-direction: column; 
+        align-items: center; 
+        height: auto; 
+        padding: 1rem;
+        gap: 0.5rem; 
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: stretch; 
+        height: auto; 
+    }
+
+    .navContainer {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 1rem; 
+    }
+
+    .contentContainer {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .button1 {
+        font-size: 1rem;
+        padding: 0.5rem 1rem; 
+    }
+
+    h2 {
+        font-size: 1.5rem; 
+        text-align: center; 
+    }
+}

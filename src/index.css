@@ -1,5 +1,5 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Lato', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -17,6 +17,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background);
+}
+h1, h2, h3, p {
+  font-family: 'Lato', sans-serif;
 }
 
 h1 {
@@ -73,7 +76,7 @@ button {
   height: 40px;
 
   text-decoration: none;
-  width: auto; /* eller fit-content, hvis understøttet */
+  width: auto; 
   max-width: max-content;
 }
 .button:hover {
@@ -95,7 +98,7 @@ button {
   height: 40px;
 
   text-decoration: none;
-  width: auto; /* eller fit-content, hvis understøttet */
+  width: auto; 
   max-width: max-content;
 }
 .button1:hover {

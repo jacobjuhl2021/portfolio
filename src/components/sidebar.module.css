@@ -5,7 +5,7 @@
   flex-direction: column; /* Sørger for, at elementerne stables lodret */
   justify-content: center; /* Placerer elementerne i toppen af containeren */
   align-items: center; /* Centrerer elementerne horisontalt */
-  
+  border-left: 6px solid var(--primary);
 }
 
 .sidebar ul {
@@ -40,23 +40,39 @@
 
 .active {
   font-weight: bold;
-  color: var(--primary); /* Fremhæv aktivt element */
-  position: relative; /* Gør det muligt at placere ::after relativt til teksten */
+  color: var(--primary); 
+  position: relative; 
   text-decoration: none;
-  padding-top: 10px; /* Tilføj afstand over teksten */
+  padding-top: 10px; 
   padding-bottom: 10px;
 }
 
 
 .active::after {
-  content: ''; /* Tilføj en tom linje */
+  content: ''; 
   position: absolute;
   left:  -1000px;
   right: -1000px;
-  bottom: 10px;
-  height: 3px; 
+  bottom: 6px;
+  height: 6px; 
   background-color: var(--primary); 
   transform: scaleX(0.5); 
   
 }
   
+@media (max-width: 768px) {
+
+  .sidebar {
+    height: auto; 
+    padding: 1rem; 
+    border-left: none;
+  }
+
+  .sidebar ul {
+    width: 100%; 
+  }
+
+  .link {
+    font-size: 1.2em; 
+  }
+}

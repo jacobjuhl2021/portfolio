@@ -49,3 +49,46 @@ span {
 .liLink span:hover {
     color: var(--primary);
 }
+@media (max-width: 768px) {
+    .flexContainer {
+      flex-direction: column; 
+      align-items: center; 
+      height: auto; 
+      padding: 1rem;
+    }
+  
+    .subFlexContainer {
+      margin-left: 0; 
+      text-align: center; 
+    }
+  
+    .cvImage {
+      height: auto;     
+      width: 100%;      
+      max-width: 300px; 
+      margin-top: 1rem; 
+    }
+  
+    .list {
+      padding: 0;
+      margin: 1rem 0;
+    }
+  
+    .liLink span {
+      font-size: 1rem; 
+    }
+  
+    .header {
+      font-size: 1.5rem; 
+    }
+  
+    .paragraph {
+      font-size: 1rem; 
+      line-height: 1.4; 
+    }
+  
+    .button {
+      font-size: 1rem; 
+      padding: 0.5rem 1rem; 
+    }
+  }
