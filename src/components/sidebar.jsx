@@ -1,6 +1,6 @@
 // src/components/Sidebar.js
 import React from 'react';
-import styles from './Sidebar.module.css'; 
+import styles from './sidebar.module.css'; 
 
 export default function Sidebar({ setActiveProject, activeProject }) { 
   return (
