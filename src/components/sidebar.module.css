@@ -47,7 +47,6 @@
   padding-bottom: 10px;
 }
 
-
 .active::after {
   content: ''; 
   position: absolute;
@@ -56,23 +55,97 @@
   bottom: 6px;
   height: 6px; 
   background-color: var(--primary); 
-  transform: scaleX(0.5); 
-  
+  transform: scaleX(0.5);  
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  z-index: 1001;
+}
+
+.burgerBar {
+  width: 28px;
+  height: 4px;
+  background: var(--primary);
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Menu styles for mobile */
+.menu {
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+.closeBtnLi {
+  display: none;
+}
+.closeBtn {
+  display: none;
 }
   
 @media (max-width: 768px) {
+  .burger {
+    display: flex;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    margin-bottom: 0;
 
+  }
   .sidebar {
-    height: auto; 
-    padding: 1rem; 
-    border-left: none;
+    position: static;
+    height: 0;
+    min-height: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Eller flex hvis du har brug for det til burger-knappen */
+    width: 0;
+    overflow: visible;
+    background: none;
+    
   }
-
-  .sidebar ul {
-    width: 100%; 
+  .menu {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    flex-direction: column;
+    background: var(--text);
+    width: 100vw; /* Dækker hele viewporten */
+    height: 100vh; /* Dækker hele viewporten */
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    position: fixed; /* Fast placeret over alt */
+    top: 0;
+    left: 0;
+    z-index: 2000; /* Højere end alt andet */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem; 
   }
-
-  .link {
-    font-size: 1.2em; 
+  .open {
+    max-height: 100vh;
+    opacity: 1;
+    pointer-events: auto;
+    transition: max-height 0.3s ease, opacity 0.3s;
+  }
+  .menu li button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary);
   }
 }

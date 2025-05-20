@@ -16,44 +16,43 @@
     width: 20vw;
     height: 90vh;
     overflow: hidden;
-    
-    /* border-color: blue;
-    border-width: 5px;
-    border-style: solid;
-    box-sizing: border-box; Sørger for, at border ikke forstørrer elementet */
 }
 .contentContainer {
     width: 80vw; 
     height: 90vh;
     overflow: hidden; 
-    /* border-color: brown;
-    border-width: 5px;
-    border-style: solid;
-    box-sizing: border-box; Sørger for, at border ikke ændrer bredden */
 }
 
 
 
 @media (max-width: 768px) {
-
     .pageTop {
-        flex-direction: column; 
+        flex-direction: row; 
         align-items: center; 
         height: auto; 
         padding: 1rem;
         gap: 0.5rem; 
     }
-
+    
     .container {
         flex-direction: column;
         align-items: stretch; 
         height: auto; 
     }
-
+    
     .navContainer {
-        width: 100%; 
-        height: auto; 
-        margin-bottom: 1rem; 
+        display: none;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .burger {
+        display: flex;
+        position: fixed;
+        top: 1.5rem;
+        left: 1.5rem;
+        z-index: 2101;
     }
 
     .contentContainer {

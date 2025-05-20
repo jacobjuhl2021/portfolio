@@ -63,19 +63,14 @@ export default function About() {
               </ul>
               
               <div>
-                <p> Checkout my previous projects:</p>
+                <p> Click here to see what i have previously made:</p>
                 <Link to="/projects" className="button">Projects📖</Link>
               </div>
 
             </div>
             <img src={cvImage} alt="Jacob Juhl CV" className={styles.cvImage} />
           </div>
-
-
-
       </section>
-
-
     );
   }
   

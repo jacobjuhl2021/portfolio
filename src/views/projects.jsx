@@ -40,25 +40,23 @@ export default function Projects() {
     }
   };
 
-  return (
-    <>
-      <div className={styles.pageTop}>
-        <Link to="/" className="button1">
-          About me {emojis[emojiIndex]} 
-        </Link>
-        <h2>My Projects</h2>
-      </div>
+return (
+  <>
+    <div className={styles.pageTop}>
+      <Link to="/" className="button1">
+        About me {emojis[emojiIndex]} 
+      </Link>
+      <h2>My Projects</h2>
+    </div>
 
-      <div className={styles.container}>
-        <div className={styles.navContainer}>
-          {/* Pass both setActiveProject and activeProject to Sidebar */}
-          <Sidebar setActiveProject={setActiveProject} activeProject={activeProject} />
-        </div>
-        
-        <div className={styles.contentContainer}>
-          {renderActiveProject()} {/* Render det aktive projekt */}
-        </div>
+    <Sidebar setActiveProject={setActiveProject} activeProject={activeProject} />
+
+    <div className={styles.container}>
+      {/* Fjern navContainer helt */}
+      <div className={styles.contentContainer}>
+        {renderActiveProject()}
       </div>
-    </>
-  );
+    </div>
+  </>
+);
 }
