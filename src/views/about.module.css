@@ -63,6 +63,7 @@ span {
     }
   
     .cvImage {
+      display: none;
       height: auto;     
       width: 100%;      
       max-width: 300px; 
