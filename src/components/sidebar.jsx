@@ -17,6 +17,7 @@ export default function Sidebar({ setActiveProject, activeProject }) {
         className={styles.burger} 
         onClick={() => setOpen(!open)}
         aria-label="Toggle menu"
+        type="button"
       >
         <span className={styles.burgerBar}></span>
         <span className={styles.burgerBar}></span>
@@ -59,8 +60,13 @@ export default function Sidebar({ setActiveProject, activeProject }) {
             Geografisk have - Project
           </span>
         </li>
-        <li>
-          <button onClick={() => setOpen(false)} aria-label="Luk menu" type="button">
+        <li className={styles.closeBtnLi}>
+          <button
+            className={styles.closeBtn}
+            onClick={() => setOpen(false)}
+            aria-label="Luk menu"
+            type="button"
+          >
             &times;
           </button>
         </li>

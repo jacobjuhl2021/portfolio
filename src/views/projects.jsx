@@ -49,10 +49,10 @@ return (
       <h2>My Projects</h2>
     </div>
 
-    <Sidebar setActiveProject={setActiveProject} activeProject={activeProject} />
 
     <div className={styles.container}>
       {/* Fjern navContainer helt */}
+      <Sidebar setActiveProject={setActiveProject} activeProject={activeProject} />
       <div className={styles.contentContainer}>
         {renderActiveProject()}
       </div>
